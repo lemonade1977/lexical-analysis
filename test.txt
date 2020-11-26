@@ -2,7 +2,7 @@ void main(){
 /*aergareg
 ersgreg
 awegrg
-ewts tawer*/
+ewts  tawer*/
     int a1 awe =   1//aerwtg aewrat;;
     char b? = 2;
     int c2c = 3;/*sgrsg*/ aeheafa;
