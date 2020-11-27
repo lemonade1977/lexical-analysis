@@ -24,13 +24,13 @@ def process(file_name):
         while i < length - 1:  # 逐个读取字符
             i += 1
             # 忽略注释
-            if read[i] == '/' and read[i + 1] == '*':
+            if read[i] == '/' and read[i + 1] == '*' and sign == 0:
                 notes1 = 1
                 i += 1
-            elif read[i] == '*' and read[i + 1] == '/':
+            elif read[i] == '*' and read[i + 1] == '/' and sign == 0:
                 notes1 = 0
                 i += 1
-            elif read[i] == '/' and read[i + 1] == '/':
+            elif read[i] == '/' and read[i + 1] == '/' and sign == 0:
                 notes2 = 1
                 i += 1
             elif read[i] == '\n':
