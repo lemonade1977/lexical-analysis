@@ -50,7 +50,7 @@ def process(file_name):
             # 遇到空格、换行、制表符同样跳过
             elif read[i] == ' ' or read[i] == '\n' or read[i] == '\t':
                 continue
-            # 如果读到的是数字则将其后面的数字一起读取出来，匹配为整数
+            # 如果读到的是字母，如果其后面接的是数字或是字母则将其一起读取出来，匹配为变量
             elif sign == 0 and read[i].isalpha():
                 temp = ''
                 while i != length:
@@ -65,7 +65,7 @@ def process(file_name):
                     print('(', temp, ':', key_word.get(temp), ')', file=fp_write)
                 else:
                     print('(', temp, ':', 10, ')', file=fp_write)
-            # 如果读到的是字母，如果其后面接的是数字或是字母则将其一起读取出来，匹配为变量
+            # 如果读到的是数字则将其后面的数字一起读取出来，匹配为整数
             elif sign == 0 and read[i].isdigit():
                 temp = ''
                 while i != length:
